@@ -33,7 +33,7 @@ p {
 
 /* Header */
 
-.head {
+.header {
   border-bottom: 1px solid #ececec;
 }
 
@@ -45,34 +45,34 @@ p {
   margin-right: auto;
 }
 
-.container .nav {
+.container .header-link {
   display: inline-block;
 }
 
-.main-nav {
+.header-container {
   display: flex;
   align-items: center;
 }
 
-.ul-nav {
+.header-nav {
   display: flex;
   margin: 0;
 }
 
-.item-nav:not(:last-child) {
+.header-item:not(:last-child) {
   margin-right: 40px;
 }
 
-.list .nav {
+.list .header-link {
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
-.item-nav {
+.header-item {
   position: relative;
 }
 
-.active-page::after {
+.active-box::after {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -101,7 +101,7 @@ p {
   color: var(--accent-color);
 }
 
-.nav {
+.header-link {
   position: relative;
   font-weight: 500;
   line-height: 1.14;
@@ -111,12 +111,12 @@ p {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav:hover,
-.nav:focus {
+.header-link:hover,
+.header-link:focus {
   color: var(--accent-color);
 }
 
-.header-contact {
+.contact {
   display: inline-flex;
   align-items: center;
   font-weight: 500;
@@ -127,20 +127,20 @@ p {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-header {
+.header-contacts {
   margin-left: auto;
 }
 
-.header-contact:not(:last-child) {
+.contact:not(:last-child) {
   margin-right: 30px;
 }
 
-.header-contact:hover,
-.header-contact:focus {
+.contact:hover,
+.contact:focus {
   color: var(--accent-color);
 }
 
-.icon-mail {
+.contact-icon {
   margin-right: 10px;
   fill: currentColor;
 }
