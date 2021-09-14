@@ -178,12 +178,12 @@ p {
   opacity: 1;
 }
 
-.backdrop.is-hidden {
+.backdrop.backdrop-hidden {
   opacity: 0;
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
+.backdrop.backdrop-hidden .modal {
   transform: translate(-50%, -50%) scale(0.9);
 }
 
@@ -201,7 +201,7 @@ p {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.field-modal {
+.form-box {
   display: inline-block;
   margin-left: 40px;
   margin-right: 40px;
@@ -209,7 +209,7 @@ p {
   padding: 0;
 }
 
-.input-field-modal {
+.form-field {
   width: 100%;
   height: 40px;
   padding-left: 42px;
@@ -220,16 +220,16 @@ p {
   outline: none;
 }
 
-.input-field-modal:focus-within,
-.input-field-feedback:focus-within {
+.form-field:focus-within,
+.form-field-feedback:focus-within {
   border-color: var(--accent-color);
 }
 
-.input-field-modal:focus-within + .icon-modal {
+.form-field:focus-within + .form-field-icon {
   fill: var(--accent-color);
 }
 
-.input-field-feedback {
+.form-field-feedback {
   height: auto;
   width: 100%;
   padding: 12px 16px;
@@ -240,11 +240,11 @@ p {
   resize: none;
 }
 
-.input-field-feedback::placeholder {
+.form-field-feedback::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.field-modal-label {
+.form-label {
   position: relative;
   display: inline-block;
   width: 100%;
@@ -252,11 +252,11 @@ p {
   padding: 0;
 }
 
-.field-modal-label:first-child {
+.form-label:first-child {
   margin-top: 0;
 }
 
-.modal-title {
+.form-title {
   font-size: 20px;
   line-height: 23px;
   color: var(--second-color);
@@ -269,13 +269,13 @@ p {
   line-height: 1.16;
 }
 
-.icon-modal {
+.form-field-icon {
   position: absolute;
   top: 55%;
   left: 12px;
 }
 
-.checkbox-label {
+.form-checkbox-label {
   width: 100%;
   margin-top: 20px;
   display: inline-flex;
@@ -283,7 +283,7 @@ p {
   justify-content: center;
 }
 
-.checkbox-title {
+.form-checkbox-title {
   margin-left: 7px;
 }
 
@@ -291,7 +291,7 @@ p {
   color: var(--accent-color);
 }
 
-.checkbox {
+.form-checkbox-field {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -302,7 +302,7 @@ p {
   overflow: hidden;
 }
 
-.icon-checkbox {
+.form-checkbox-icon {
   display: inline-block;
   box-sizing: border-box;
   background-color: transparent;
@@ -310,12 +310,12 @@ p {
   border-radius: 2px;
 }
 
-.checkbox:checked + .icon-checkbox {
+.form-checkbox-field:checked + .form-checkbox-icon {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-.close-button {
+.button-close {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -327,13 +327,13 @@ p {
   cursor: pointer;
 }
 
-.icon-close {
+.close-icon {
   width: 11px;
   height: 11px;
   fill: var(--second-color);
 }
 
-.close-button:focus-within > .icon-close {
+.button-close:focus-within > .close-icon {
   fill: var(--accent-color);
 }
 
@@ -367,15 +367,17 @@ p {
   cursor: pointer;
 }
 
-.modal-btn {
+.hero-button__shadow {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .button:focus-within,
 .hero-button:focus-within,
-.modal-btn:focus-within {
+.hero-button__shadow:focus-within {
   background: #188ce8;
 }
+
+/* Features */
 
 .features .list {
   display: flex;
@@ -411,7 +413,7 @@ p {
   color: var(--second-color);
 }
 
-.container .list-description {
+.container .description-list {
   display: flex;
   padding: 0;
   padding-bottom: 94px;
@@ -426,12 +428,12 @@ p {
   position: relative;
 } */
 
-.thumb {
+.description-thumb {
   position: relative;
   line-height: 0;
 }
 
-.label {
+.description-label {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -471,7 +473,7 @@ p {
   text-align: center;
 }
 
-.team {
+.team-item {
   background-color: var(--third-color);
   min-height: 368px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -479,14 +481,14 @@ p {
   border-radius: 0px 0px 4px 4px;
 }
 
-.container .list-team {
+.container .team-list {
   display: flex;
   padding: 0;
   margin-top: 50px;
   padding-bottom: 94px;
 }
 
-.container .team:not(:last-child) {
+.container .team-item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -501,7 +503,7 @@ p {
   background-color: #2f303a;
 }
 
-.logo .logo-footer-second {
+.logo .logo-title-end {
   color: var(--third-color);
 }
 .footer-cont {
@@ -535,7 +537,7 @@ p {
   color: var(--accent-color);
 }
 
-.footer-title {
+.follow-title {
   text-transform: uppercase;
   color: var(--third-color);
   font-size: 14px;
@@ -544,7 +546,7 @@ p {
   margin-bottom: 20px;
 }
 
-.icon-footer {
+.follow {
   display: block;
   margin-left: 70px;
 }
@@ -554,7 +556,7 @@ p {
   margin-left: auto;
 }
 
-.field {
+.subscribe-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -582,7 +584,7 @@ p {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.email-field {
+.subscribe-field {
   width: 100%;
   height: 50px;
   padding: 16px;
@@ -595,17 +597,17 @@ p {
   outline: none;
 }
 
-.email-field:placeholder-shown {
+.subscribe-field:placeholder-shown {
   padding-left: 16px;
   font-size: 16px;
 }
 
-.field-label {
+.subscribe-label {
   width: 100%;
   margin-right: 12px;
 }
 
-.icon-send {
+.subscribe-icon {
   width: 24px;
   height: 24px;
   margin-left: 10px;
@@ -613,16 +615,16 @@ p {
 
 /* Icons */
 
-.icon-features {
+.features-box {
   background-color: var(--bg-color);
   border-radius: 4px;
 }
 
-.icon-features-list {
+.features-icon {
   margin: 25px 100px;
 }
 
-.icon-team {
+.team-box {
   display: flex;
   align-items: center;
   margin: 16px 32px 30px 32px;
@@ -632,7 +634,7 @@ p {
   display: inline-flex;
 }
 
-.icon-button {
+.team-button {
   display: inline-flex;
   margin: 0;
   padding: 0;
@@ -648,34 +650,34 @@ p {
   cursor: pointer;
 }
 
-.icon-button:last-child {
+.team-button:last-child {
   margin-right: 0;
 }
 
-.icon-social {
+.team-social {
   fill: currentColor;
 }
 
-.icon-button:hover {
+.team-button:hover {
   color: var(--third-color);
   background-color: var(--accent-color);
 }
 
-.clients-icon {
+.clients-list {
   display: inline-flex;
   margin-top: 50px;
   padding: 0;
 }
 
-.icon-item-clients {
+.clients-item {
   margin-right: 30px;
 }
 
-.icon-item-clients:last-child {
+.clients-item:last-child {
   margin-right: 0;
 }
 
-.icon-button-clients {
+.clients-button {
   box-sizing: border-box;
   width: 170px;
   margin: 0;
@@ -693,20 +695,20 @@ p {
   cursor: pointer;
 }
 
-.icon-button-clients:last-child {
+.clients-button:last-child {
   margin-right: 0;
 }
 
-.icon-clients {
+.clients-icon {
   fill: currentColor;
 }
 
-.icon-button-clients:hover {
+.clients-button:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-.icon-button-footer {
+.follow-button {
   display: inline-flex;
   margin: 0;
   padding: 0;
@@ -721,22 +723,22 @@ p {
   cursor: pointer;
 }
 
-.icon-button-footer:last-child {
+.follow-button:last-child {
   margin-right: 0;
 }
 
-.icon-social-footer {
+.follow-icon {
   fill: currentColor;
 }
 
-.icon-button-footer:hover {
+.follow-button:hover {
   color: var(--third-color);
   background-color: var(--accent-color);
 }
 
 /* Portfolio */
 
-.filter {
+.filter-button {
   padding: 6px 22px;
   border-radius: 4px;
   display: block;
@@ -755,22 +757,22 @@ p {
   cursor: pointer;
 }
 
-.button-filter {
+.filter-item {
   margin-right: 8px;
 }
 
-.button-filter:last-child {
+.filter-item:last-child {
   margin-right: 0;
 }
 
-.filter:hover,
-.filter:focus {
+.filter-button:hover,
+.filter-button:focus {
   background-color: var(--accent-color);
   color: var(--third-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.list-button {
+.filter-list {
   display: flex;
   justify-content: center;
 }
@@ -851,7 +853,7 @@ p {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.thumb-desc {
+.project-desc {
   position: absolute;
   display: inline-block;
   left: 0;
@@ -868,15 +870,15 @@ p {
   transform: translateY(0%);
 }
 
-.project-item:hover .thumb-desc {
+.project-item:hover .project-desc {
   transform: translateY(0%);
 }
 
-.card-description {
+.project-box {
   border: 1px solid #eeeeee;
   border-top-color: transparent;
 }
 
-.img-desc {
+.project-img {
   display: block;
 }
