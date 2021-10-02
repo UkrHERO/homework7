@@ -93,7 +93,7 @@
   line-height: 23px;
   color: $second-color;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 2px;
 }
 
 .label-title {
@@ -147,10 +147,17 @@
   }
 }
 
+.button-close-box {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .button-close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  margin-right: 8px;
   width: 30px;
   height: 30px;
   background-color: $third-color;
@@ -160,8 +167,8 @@
 }
 
 .close-icon {
-  width: 11px;
-  height: 11px;
+  width: 18px;
+  height: 18px;
   fill: $second-color;
 
   .button-close:focus-within > & {

@@ -3,9 +3,9 @@
   padding: 0;
 }
 
-.container .features {
-  padding-top: 94px;
-  padding-bottom: 94px;
+.section.features {
+  /* padding-top: 0; */
+  padding-bottom: 0;
 }
 
 .features .list-item:not(:last-child) {
